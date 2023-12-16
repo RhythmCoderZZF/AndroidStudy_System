@@ -1,7 +1,5 @@
 package com.zzf.studysystem.usb;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.hardware.usb.UsbDevice;
 import android.hardware.usb.UsbManager;
@@ -9,12 +7,11 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.zzf.studysystem.R;
+import com.zzf.studysystem._base.BaseActivity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
-public class UsbActivity extends AppCompatActivity implements OnDeviceConnectListener {
+public class UsbMainActivity extends BaseActivity implements OnDeviceConnectListener {
     private UsbManager mUsbManager;
     private USBMonitor mUsbMonitor;
 
