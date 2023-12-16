@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Author:create by RhythmCoder
+ * Author:create by RhythmCoderZZF
  * Date:2023/12/9
  * Description:
  * Listen to some USB broadcasts and request usb connection permission.

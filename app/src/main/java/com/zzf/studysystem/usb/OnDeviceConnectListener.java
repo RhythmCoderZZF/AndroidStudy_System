@@ -3,7 +3,7 @@ package com.zzf.studysystem.usb;
 import android.hardware.usb.UsbDevice;
 
 /**
- * Author:create by RhythmCoder
+ * Author:create by RhythmCoderZZF
  * Date:2023/12/9
  * Description:
  */

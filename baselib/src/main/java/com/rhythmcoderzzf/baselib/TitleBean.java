@@ -1,9 +1,9 @@
-package com.zzf.studysystem._base;
+package com.rhythmcoderzzf.baselib;
 
 import android.app.Activity;
 
 /**
- * Author:create by RhythmCoder
+ * Author:create by RhythmCoderZZF
  * Date:2023/12/16
  * Description:
  */
@@ -24,28 +24,36 @@ public class TitleBean {
         mActivityClass = clazz;
     }
 
-    public String getmTitle() {
+    public String getTitle() {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
+    public void setTitle(String mTitle) {
         this.mTitle = mTitle;
     }
 
-    public String getmSubTitle() {
+    public String getSubTitle() {
         return mSubTitle;
     }
 
-    public void setmSubTitle(String mSubTitle) {
+    public void setSubTitle(String mSubTitle) {
         this.mSubTitle = mSubTitle;
     }
 
-    public Class<? extends Activity> getmActivityClass() {
+    public Class<? extends Activity> getActivityClass() {
         return mActivityClass;
     }
 
-    public void setmActivityClass(Class<Activity> mActivityClass) {
+    public void setActivityClass(Class<Activity> mActivityClass) {
         this.mActivityClass = mActivityClass;
+    }
+
+    public String getInfo() {
+        return mInfo;
+    }
+
+    public void setInfo(String mInfo) {
+        this.mInfo = mInfo;
     }
 
     @Override

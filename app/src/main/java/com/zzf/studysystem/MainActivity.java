@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
 
-import com.zzf.studysystem._base.ListAdapter;
-import com.zzf.studysystem._base.TitleBean;
+import com.rhythmcoderzzf.baselib.ListAdapter;
+import com.rhythmcoderzzf.baselib.TitleBean;
 import com.zzf.studysystem.permission.PermissionMainActivity;
 import com.zzf.studysystem.usb.UsbMainActivity;
 
@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private final List<TitleBean> mList = new ArrayList<>();
 
     private void initRvDataList() {
-        mList.add(new TitleBean("USB", getString(R.string.usb_subTitle), "", UsbMainActivity.class));
+        mList.add(new TitleBean("USB", getString(R.string.usb_subTitle), getString(R.string.usb_info), UsbMainActivity.class));
         mList.add(new TitleBean(getString(R.string.permission), PermissionMainActivity.class));
     }
 

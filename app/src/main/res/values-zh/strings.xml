@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">学习系统</string>
-    <string name="tips">提示</string>
     <string name="permission">权限</string>
     <string name="usb_subTitle">USB主机和配件模式</string>
+    <string name="usb_info">插入USBCamera</string>
 </resources>

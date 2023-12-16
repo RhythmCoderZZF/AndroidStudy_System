@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="6dp"
-    android:layout_marginVertical="10dp"
-    app:cardBackgroundColor="@color/pink">
+    android:layout_marginVertical="10dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,21 +13,19 @@
 
         <TextView
             android:id="@+id/title"
-            android:textSize="18sp"
-            android:textColor="?android:colorPrimary"
-            android:textStyle="bold"
-            android:layout_margin="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Title" />
+            android:layout_margin="4dp"
+            android:textColor="?android:colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/subTitle"
-            android:textSize="12sp"
-            android:textColor="?android:colorSecondary"
-            android:layout_margin="4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SubTitle" />
+            android:layout_margin="4dp"
+            android:textColor="?android:colorSecondary"
+            android:textSize="14sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

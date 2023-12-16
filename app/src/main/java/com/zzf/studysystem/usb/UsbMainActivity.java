@@ -6,8 +6,8 @@ import android.hardware.usb.UsbManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.rhythmcoderzzf.baselib.BaseActivity;
 import com.zzf.studysystem.R;
-import com.zzf.studysystem._base.BaseActivity;
 
 import java.util.List;
 

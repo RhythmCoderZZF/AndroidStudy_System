@@ -1,4 +1,4 @@
-package com.zzf.studysystem._base;
+package com.rhythmcoderzzf.baselib;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,15 +10,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zzf.studysystem.R;
+import com.rhythmcoderzzf.baselib.utils.Constants;
 
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    private List<TitleBean> dataList;
+    private List<TitleBean> mDataList;
 
     public ListAdapter(List<TitleBean> dataList) {
-        this.dataList = dataList;
+        this.mDataList = dataList;
     }
 
     @NonNull
@@ -30,14 +30,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        TitleBean data = dataList.get(position);
-        holder.tvTitle.setText(data.getmTitle());
-        holder.tvSubTitle.setText(data.getmSubTitle());
+        TitleBean data = mDataList.get(position);
+        holder.tvTitle.setText(data.getTitle());
+        holder.tvSubTitle.setText(data.getSubTitle());
     }
 
     @Override
     public int getItemCount() {
-        return dataList.size();
+        return mDataList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -54,10 +54,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();
-            TitleBean data = dataList.get(position);
+            TitleBean data = mDataList.get(position);
             Context context = v.getContext();
-            Intent intent = new Intent(context, data.getmActivityClass());
-            intent.putExtra("title", data.getmTitle());
+            Intent intent = new Intent(context, data.getActivityClass());
+            intent.putExtra(Constants.INTENT_TITLE, data.getTitle());
+            intent.putExtra(Constants.INTENT_INFO, data.getInfo());
             context.startActivity(intent);
         }
     }

@@ -1,14 +1,14 @@
-package com.zzf.studysystem._base.utils;
+package com.rhythmcoderzzf.baselib.utils;
 
 import android.util.Log;
 
 /**
- * Author:create by RhythmCoder
+ * Author:create by RhythmCoderZZF
  * Date:2023/12/16
  * Description:
  */
 public class LogUtil {
-    private static final String APP = "rcz";
+    private static final String MAINTAG = "mtag";
     private static final int D = 1;
     private static final int I = 2;
     private static final int W = 3;
@@ -47,7 +47,7 @@ public class LogUtil {
     }
 
     private static void log(int level, String tag, String msg, Throwable t) {
-        tag = APP + "/" + tag;
+        tag = MAINTAG + "/" + tag;
         switch (level) {
             case D:
                 Log.d(tag, msg, t);
