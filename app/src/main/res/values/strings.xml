@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">StudySystem</string>
+    <string name="app_name">Android System Study</string>
     <string name="permission">Permission</string>
     <string name="usb_subTitle">usb host and accessary mode</string>
     <string name="usb_info">plugin USB Camera</string>
