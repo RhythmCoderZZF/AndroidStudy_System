@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView.Normal" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView.Small" parent="TextView.Normal">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextView.Large" parent="TextView.Normal">
+        <item name="android:textColor">?android:colorPrimary</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

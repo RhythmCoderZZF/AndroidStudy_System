@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zzf.studysystem">
     <!-- The app needs to be installed on a device that supports usb host -->
     <uses-feature android:name="android.hardware.usb.host" />
+    <uses-permission android:name="android.permission.NFC" />
 
     <application
         android:allowBackup="true"
@@ -14,7 +16,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy_System"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--Permission-->
         <activity android:name=".permission.PermissionMainActivity" />
+        <!--USB-->
         <activity
             android:name=".usb.UsbMainActivity"
             android:exported="true">
@@ -24,14 +36,29 @@
             <!--filter some interest usb devices -->
             <meta-data
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
-                android:resource="@xml/device_filter" />
+                android:resource="@xml/usb_device_filter" />
         </activity>
+        <!--NFC-->
+        <activity android:name=".nfc.NFCMainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".nfc.NFCMain2Activity"
             android:exported="true">
+            <!--ACTION_NDEF_DISCOVERED-->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <!--ACTION_TECH_DISCOVERED-->
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+            <!--ACTION_TAG_DISCOVERED-->
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
             </intent-filter>
         </activity>
     </application>

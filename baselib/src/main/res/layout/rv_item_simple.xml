@@ -13,19 +13,17 @@
 
         <TextView
             android:id="@+id/title"
+            style="@style/TextView.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
-            android:textColor="?android:colorPrimary"
-            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/subTitle"
+            style="@style/TextView.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:textColor="?android:colorSecondary"
-            android:textSize="14sp" />
+            android:layout_margin="4dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

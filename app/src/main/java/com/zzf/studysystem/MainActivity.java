@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.rhythmcoderzzf.baselib.ListAdapter;
 import com.rhythmcoderzzf.baselib.TitleBean;
+import com.zzf.studysystem.nfc.NFCMainActivity;
 import com.zzf.studysystem.permission.PermissionMainActivity;
 import com.zzf.studysystem.usb.UsbMainActivity;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private void initRvDataList() {
         mList.add(new TitleBean("USB", getString(R.string.usb_subTitle), getString(R.string.usb_info), UsbMainActivity.class));
         mList.add(new TitleBean(getString(R.string.permission), PermissionMainActivity.class));
+        mList.add(new TitleBean("NFC", NFCMainActivity.class));
     }
 
     @Override

@@ -22,8 +22,13 @@ import com.rhythmcoderzzf.baselib.utils.Constants;
  * Description:
  */
 public class BaseActivity extends AppCompatActivity {
+    protected static String TAG = "";
     private String mInfo;
     private Dialog mDialogInfo;
+
+    {
+        TAG = this.getClass().getSimpleName();
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

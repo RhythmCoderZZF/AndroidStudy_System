@@ -26,9 +26,8 @@ public class UsbMainActivity extends BaseActivity implements OnDeviceConnectList
     @Override
     protected void onStart() {
         super.onStart();
-        //do not register UsbMonitor in onRresume() func
+        //do not register UsbMonitor in onResume() func
         mUsbMonitor.register();
-
         List<UsbDevice> listDevices = mUsbMonitor.getDeviceList();
         UsbDevice device = listDevices.size() > 0 ? listDevices.get(0) : null;
         if (device != null) {
