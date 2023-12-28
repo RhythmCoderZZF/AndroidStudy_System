@@ -5,6 +5,8 @@
     <!-- The app needs to be installed on a device that supports usb host -->
     <uses-feature android:name="android.hardware.usb.host" />
     <uses-permission android:name="android.permission.NFC" />
+    <!--[Module-Permission] #1 declare permission-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
