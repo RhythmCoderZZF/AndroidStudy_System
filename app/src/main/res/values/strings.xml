@@ -3,4 +3,6 @@
     <string name="permission">Permission</string>
     <string name="usb_subTitle">usb host and accessary mode</string>
     <string name="usb_info">plugin USB Camera</string>
+    <string name="permission_by_user">Use Normal API to request permissions</string>
+    <string name="permission_by_system">Use the RequestPermission class in AndroidX to request permissions</string>
 </resources>

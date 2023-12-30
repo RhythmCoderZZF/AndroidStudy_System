@@ -6,14 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".permission.PermissionMainActivity">
 
-    <Button
-        android:id="@+id/btnRequestPermission"
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextView.Normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="request permission"
-        android:textAllCaps="false"
+        android:text="@string/permission_by_system"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRequestPermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="request"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        style="@style/TextView.Normal"
+        android:text="@string/permission_by_user"
+        app:layout_constraintStart_toStartOf="@+id/btnRequestPermission"
+        app:layout_constraintTop_toBottomOf="@+id/btnRequestPermission" />
+
+    <Button
+        android:id="@+id/btnRequestPermission2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="request"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

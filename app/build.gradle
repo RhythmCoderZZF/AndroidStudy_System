@@ -9,8 +9,7 @@ android {
     defaultConfig {
         applicationId "com.zzf.studysystem"
         minSdk 27
-        /*usb camera need Camera Permission above 27 */
-        targetSdk 27
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 

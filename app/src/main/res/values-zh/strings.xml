@@ -4,4 +4,6 @@
     <string name="permission">权限</string>
     <string name="usb_subTitle">USB主机和配件模式</string>
     <string name="usb_info">插入USBCamera</string>
+    <string name="permission_by_system">使用AndroidX中的RequestPermission类来请求权限</string>
+    <string name="permission_by_user">使用传统方式请求权限</string>
 </resources>

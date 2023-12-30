@@ -2,11 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zzf.studysystem">
-    <!-- The app needs to be installed on a device that supports usb host -->
-    <uses-feature android:name="android.hardware.usb.host" />
-    <uses-permission android:name="android.permission.NFC" />
-    <!--[Module-Permission] #1 declare permission-->
+
+    <!--[Permission]-->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+
+    <!--[USB] The app needs to be installed on a device that supports usb host -->
+    <uses-feature android:name="android.hardware.usb.host" />
+    <!--[NFC]-->
+    <uses-permission android:name="android.permission.NFC" />
 
     <application
         android:allowBackup="true"
