@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     private final List<TitleBean> mList = new ArrayList<>();
 
     private void initRvDataList() {
-        mList.add(new TitleBean("USB", getString(R.string.usb_subTitle), getString(R.string.usb_info), UsbMainActivity.class));
-        mList.add(new TitleBean(getString(R.string.permission), PermissionMainActivity.class));
+        mList.add(new TitleBean("USB", getString(R.string.usb_sub_title), getString(R.string.usb_info), UsbMainActivity.class));
+        mList.add(new TitleBean(getString(R.string.permission),getString(R.string.permission_sub_title),getString(R.string.permission_info), PermissionMainActivity.class));
         mList.add(new TitleBean("NFC", NFCMainActivity.class));
     }
 

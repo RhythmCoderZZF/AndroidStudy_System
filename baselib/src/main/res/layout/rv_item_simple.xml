@@ -13,7 +13,7 @@
 
         <TextView
             android:id="@+id/title"
-            style="@style/TextView.Large"
+            style="@style/BaseTextView.Large"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
@@ -21,7 +21,7 @@
 
         <TextView
             android:id="@+id/subTitle"
-            style="@style/TextView.Small"
+            style="@style/BaseTextView.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="4dp" />

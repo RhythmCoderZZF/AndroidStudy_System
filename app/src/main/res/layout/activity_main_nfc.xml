@@ -6,7 +6,7 @@
 
     <TextView
         android:id="@+id/textView"
-        style="@style/TextView.Large"
+        style="@style/BaseTextView.Large"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Scan a NFC TAG:"
@@ -15,7 +15,7 @@
 
     <TextView
         android:id="@+id/tvTagRes"
-        style="@style/TextView.Normal"
+        style="@style/BaseTextView.Normal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@+id/textView"

@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Android System Study</string>
     <string name="permission">Permission</string>
-    <string name="usb_subTitle">usb host and accessary mode</string>
+    <string name="usb_sub_title">usb host and accessary mode</string>
     <string name="usb_info">plugin USB Camera</string>
+    <string name="permission_info">App permissions help support user privacy by protecting access to the following: \n\tRestricted data, such as system state and users\' contact information \n\tRestricted actions, such as connecting to a paired device and recording audio</string>
+    <string name="permission_sub_title">install-time permissions, runtime permissions, and special permissions</string>
     <string name="permission_by_user">Use Normal API to request permissions</string>
     <string name="permission_by_system">Use the RequestPermission class in AndroidX to request permissions</string>
 </resources>

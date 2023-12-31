@@ -15,6 +15,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.rhythmcoderzzf.baselib.BaseActivity;
+import com.rhythmcoderzzf.baselib.utils.Util;
 import com.zzf.studysystem.R;
 
 public class PermissionMainActivity extends BaseActivity implements View.OnClickListener {
@@ -54,6 +55,7 @@ public class PermissionMainActivity extends BaseActivity implements View.OnClick
         mBtnRequestPermission.setOnClickListener(this);
         mBtnRequestPermission2 = findViewById(R.id.btnRequestPermission2);
         mBtnRequestPermission2.setOnClickListener(this);
+        //Util.showCategoryInfo(this, findViewById(R.id.tvCategory1), "lalala");
     }
 
     @Override
@@ -140,6 +142,6 @@ public class PermissionMainActivity extends BaseActivity implements View.OnClick
     }
 
     private void toastCustomerNeverAllowPermission(String permission) {
-        Toast.makeText(this, permission.substring(permission.lastIndexOf(".")) + " never allow ><|||", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "user are not allowed to grant " + permission.substring(permission.lastIndexOf(".")), Toast.LENGTH_SHORT).show();
     }
 }

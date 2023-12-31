@@ -6,8 +6,7 @@
     <!--[Permission]-->
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <!--[USB] The app needs to be installed on a device that supports usb host -->
     <uses-feature android:name="android.hardware.usb.host" />
     <!--[NFC]-->
@@ -31,8 +30,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!--Permission-->
         <activity android:name=".permission.PermissionMainActivity" />
+
         <!--USB-->
         <activity
             android:name=".usb.UsbMainActivity"
@@ -45,6 +46,7 @@
                 android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
                 android:resource="@xml/usb_device_filter" />
         </activity>
+
         <!--NFC-->
         <activity android:name=".nfc.NFCMainActivity" />
         <activity
