@@ -71,6 +71,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".storage.StorageMainActivity" />
+        <activity android:name=".storage.all.StorageAppSpecificActivity" />
     </application>
 
 </manifest>

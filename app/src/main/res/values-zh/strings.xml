@@ -11,6 +11,7 @@
     <string name="storage">存储</string>
     <string name="storage_info">了解如何以设备上的文件形式、键值对形式、数据库形式或者其他数据类型保留应用和用户数据，以及如何与其他应用和设备共享数据。您还可以添加备份服务，使用户能够将信息存储在云端、在设备之间同步信息，以及在使用新设备时恢复这些信息。</string>
     <string name="storage_app_specific_files">应用专属文件</string>
+    <string name="storage_app_specific_files_sub_title">内部和外部存储</string>
     <string name="storage_app_specific_files_info">
         <![CDATA[
         在很多情况下，您的应用会创建其他应用不需要访问或不应访问的文件。系统提供以下位置，用于存储此类应用专属文件：

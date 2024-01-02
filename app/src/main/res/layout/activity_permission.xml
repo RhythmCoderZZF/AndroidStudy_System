@@ -10,9 +10,6 @@
     <TextView
         android:id="@+id/tvCategory1"
         style="@style/BaseCategoryTextView.Normal"
-        android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content"
         android:text="运行时权限" />
 
     <TextView

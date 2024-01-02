@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -15,8 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.rhythmcoderzzf.baselib.utils.Constants;
-
-import java.util.List;
 
 /**
  * Author:create by RhythmCoderZZF
@@ -74,5 +73,9 @@ public class BaseActivity extends AppCompatActivity {
     protected void initSimpleProjectListView(RecyclerView rv, ListAdapter adapter) {
         rv.setLayoutManager(new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL));
         rv.setAdapter(adapter);
+    }
+
+    protected void toast(String str) {
+        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 }

@@ -130,18 +130,18 @@ public class PermissionMainActivity extends BaseActivity implements View.OnClick
     }
 
     private void toastPermissionIsGranted(String permission) {
-        Toast.makeText(this, "request " + permission.substring(permission.lastIndexOf(".")) + " success ...", Toast.LENGTH_SHORT).show();
+        toast("request " + permission.substring(permission.lastIndexOf(".")) + " success ...");
     }
 
     private void toastTellCustomerWeNeedPermission(String permission) {
-        Toast.makeText(this, "we need " + permission.substring(permission.lastIndexOf(".")) + "\n to use this feature !!", Toast.LENGTH_SHORT).show();
+        toast("we need " + permission.substring(permission.lastIndexOf(".")) + "\n to use this feature !!");
     }
 
     private void toastAlreadyGetPermission(String permission) {
-        Toast.makeText(this, permission.substring(permission.lastIndexOf(".")) + " already granted ~~", Toast.LENGTH_SHORT).show();
+        toast(permission.substring(permission.lastIndexOf(".")) + " already granted ~~");
     }
 
     private void toastCustomerNeverAllowPermission(String permission) {
-        Toast.makeText(this, "user are not allowed to grant " + permission.substring(permission.lastIndexOf(".")), Toast.LENGTH_SHORT).show();
+        toast("user are not allowed to grant " + permission.substring(permission.lastIndexOf(".")));
     }
 }
