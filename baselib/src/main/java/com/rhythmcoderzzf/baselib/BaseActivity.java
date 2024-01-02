@@ -2,6 +2,7 @@ package com.rhythmcoderzzf.baselib;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -10,8 +11,12 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.rhythmcoderzzf.baselib.utils.Constants;
+
+import java.util.List;
 
 /**
  * Author:create by RhythmCoderZZF
@@ -57,12 +62,17 @@ public class BaseActivity extends AppCompatActivity {
         if (itemId == R.id.info) {
             if (mDialogInfo == null) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                mDialogInfo = builder.setTitle(getString(R.string.info)).setIcon(ContextCompat.getDrawable(this, R.drawable.baseline_info_24)).setMessage(mInfo).setPositiveButton(R.string.ok, (dialog, which) -> dialog.dismiss()).create();
+                mDialogInfo = builder.setTitle(getString(R.string.info)).setIcon(ContextCompat.getDrawable(this, R.drawable.baseline_info_24)).setMessage(Html.fromHtml(mInfo, Html.FROM_HTML_MODE_COMPACT)).setPositiveButton(R.string.ok, (dialog, which) -> dialog.dismiss()).create();
             }
             mDialogInfo.show();
         } else if (itemId == android.R.id.home) {
             finish();
         }
         return true;
+    }
+
+    protected void initSimpleProjectListView(RecyclerView rv, ListAdapter adapter) {
+        rv.setLayoutManager(new StaggeredGridLayoutManager(2, RecyclerView.VERTICAL));
+        rv.setAdapter(adapter);
     }
 }

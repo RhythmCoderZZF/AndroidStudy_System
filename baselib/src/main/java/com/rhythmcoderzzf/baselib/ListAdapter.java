@@ -21,6 +21,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         this.mDataList = dataList;
     }
 
+    public void setDataList(List<TitleBean> dataList) {
+        mDataList = dataList;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
