@@ -15,6 +15,10 @@ import com.rhythmcoderzzf.baselib.utils.LogUtil;
 import com.zzf.studysystem.R;
 
 public class NFCMain2Activity extends BaseActivity {
+    private NfcAdapter mAdapter;
+    private IntentFilter[] mIntentFilters;
+    private PendingIntent mPendingIntent;
+    private String[][] mTechList;
 
     private TextView mTvTagRes;
 
@@ -23,12 +27,53 @@ public class NFCMain2Activity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_nfc);
         mTvTagRes = findViewById(R.id.tvTagRes);
+        nfcCheck();
+        //mPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_MUTABLE);
+        /*IntentFilter filter = new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED);
+        IntentFilter filte2 = new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED);
+        IntentFilter filte3 = new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED);*/
+        /*try {
+            filter.addDataType("text/plain");
+        } catch (IntentFilter.MalformedMimeTypeException e) {
+            throw new RuntimeException(e);
+        }*/
+        /*mIntentFilters = new IntentFilter[]{filter, filte2, filte3};*/
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         LogUtil.d(TAG, "onNewIntent<<");
+        try {
+            final Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            mTvTagRes.setText(tag.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private boolean nfcCheck() {
+        mAdapter = NfcAdapter.getDefaultAdapter(this);
+        if (mAdapter == null) {
+            toast("device do not support NFC!");
+            return false;
+        } else {
+            if (!mAdapter.isEnabled()) {
+                startActivity(new Intent(Settings.ACTION_NFC_SETTINGS));
+                return false;
+            }
+        }
+        LogUtil.d(TAG, "nfcCheck<< check ok...");
+        return true;
     }
 }

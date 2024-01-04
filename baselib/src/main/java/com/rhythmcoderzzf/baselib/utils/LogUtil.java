@@ -8,7 +8,7 @@ import android.util.Log;
  * Description:
  */
 public class LogUtil {
-    private static final String MAINTAG = "mtag";
+    private static final String MAINTAG = "rczzf";
     private static final int D = 1;
     private static final int I = 2;
     private static final int W = 3;

@@ -17,6 +17,12 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <!--BaseTextViewTitle-->
+    <style name="BaseTextViewTitle.Normal" parent="BaseTextView.Normal">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <!--BaseButton-->
     <style name="BaseButton" parent="Widget.AppCompat.Button">
         <item name="android:textSize">16sp</item>

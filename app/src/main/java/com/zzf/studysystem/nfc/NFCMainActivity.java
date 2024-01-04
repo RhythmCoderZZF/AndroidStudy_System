@@ -8,7 +8,6 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.rhythmcoderzzf.baselib.BaseActivity;
 import com.rhythmcoderzzf.baselib.utils.LogUtil;
@@ -16,10 +15,9 @@ import com.zzf.studysystem.R;
 
 public class NFCMainActivity extends BaseActivity {
     private NfcAdapter mAdapter;
-    private IntentFilter[] mIntentFilters;
     private PendingIntent mPendingIntent;
+    private IntentFilter[] mIntentFilters;
     private String[][] mTechList;
-
     private TextView mTvTagRes;
 
     @Override
@@ -28,22 +26,15 @@ public class NFCMainActivity extends BaseActivity {
         setContentView(R.layout.activity_main_nfc);
         mTvTagRes = findViewById(R.id.tvTagRes);
         mPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_MUTABLE);
-        IntentFilter filter = new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED);
-        IntentFilter filte2 = new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED);
-        IntentFilter filte3 = new IntentFilter(NfcAdapter.ACTION_TAG_DISCOVERED);
-        /*try {
-            filter.addDataType("text/plain");
-        } catch (IntentFilter.MalformedMimeTypeException e) {
-            throw new RuntimeException(e);
-        }*/
-        mIntentFilters = new IntentFilter[]{filter, filte2, filte3};
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        if (nfcCheck())
+        if (nfcCheck()) {
+            //NFC前台调度系统，允许最前台的Activity拦截Intent
             mAdapter.enableForegroundDispatch(this, mPendingIntent, mIntentFilters, mTechList);
+        }
     }
 
     @Override
@@ -67,7 +58,7 @@ public class NFCMainActivity extends BaseActivity {
     private boolean nfcCheck() {
         mAdapter = NfcAdapter.getDefaultAdapter(this);
         if (mAdapter == null) {
-            Toast.makeText(this, "do not support NFC!", Toast.LENGTH_SHORT).show();
+            toast("device do not support NFC!");
             return false;
         } else {
             if (!mAdapter.isEnabled()) {
@@ -75,7 +66,7 @@ public class NFCMainActivity extends BaseActivity {
                 return false;
             }
         }
-        LogUtil.d(TAG, "nfcCheck<< check ok");
+        LogUtil.d(TAG, "nfcCheck<< check ok...");
         return true;
     }
 }
