@@ -1,8 +1,10 @@
 package com.rhythmcoderzzf.baselib;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.rhythmcoderzzf.baselib.utils.Constants;
+import com.rhythmcoderzzf.baselib.utils.LogUtil;
 
 /**
  * Author:create by RhythmCoderZZF
@@ -34,8 +37,12 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LogUtil.d(TAG, "activity onCreate<<");
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle(getIntent().getStringExtra(Constants.INTENT_TITLE));
+        String label = getIntent().getStringExtra(Constants.INTENT_TITLE);
+        if (!TextUtils.isEmpty(label)) {
+            actionBar.setTitle(getIntent().getStringExtra(Constants.INTENT_TITLE));
+        }
         mInfo = getIntent().getStringExtra(Constants.INTENT_INFO);
         mInfo = mInfo == null ? "" : mInfo;
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -77,5 +84,23 @@ public class BaseActivity extends AppCompatActivity {
 
     protected void toast(String str) {
         Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        LogUtil.d(TAG, "activity onResume<<");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        LogUtil.d(TAG, "activity onPause<<");
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        LogUtil.d(TAG, "activity onNewIntent<<");
     }
 }

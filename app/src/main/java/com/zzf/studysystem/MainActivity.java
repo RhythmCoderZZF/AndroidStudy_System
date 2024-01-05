@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private void initRvDataList() {
         mList.add(new TitleBean("USB", getString(R.string.usb_sub_title), getString(R.string.usb_info), UsbMainActivity.class));
         mList.add(new TitleBean(getString(R.string.permission),getString(R.string.permission_sub_title),getString(R.string.permission_info), PermissionMainActivity.class));
-        mList.add(new TitleBean("NFC", NFCMain2Activity.class));
+        mList.add(new TitleBean("NFC", NFCMainActivity.class));
         mList.add(new TitleBean(getString(R.string.storage),"",getString(R.string.storage_info), StorageMainActivity.class));
     }
 

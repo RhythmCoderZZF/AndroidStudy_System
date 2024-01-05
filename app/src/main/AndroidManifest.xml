@@ -56,8 +56,10 @@
             android:exported="true" />
         <activity
             android:name=".nfc.NFCMain2Activity"
+            android:launchMode="singleTop"
+            android:label="NFC"
             android:exported="true">
-            <!--优先级1 ACTION_NDEF_DISCOVERED-->
+            <!--优先级1识别 ACTION_NDEF_DISCOVERED-->
             <!--TNF_WELL_KNOW RTD_TEXT-->
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
@@ -72,14 +74,14 @@
                     android:host="baidu.com"
                     android:scheme="http" />
             </intent-filter>
-            <!--优先级2 ACTION_TECH_DISCOVERED-->
+            <!--优先级2识别 ACTION_TECH_DISCOVERED-->
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
             </intent-filter>
             <meta-data
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
-            <!--优先级3 ACTION_TAG_DISCOVERED-->
+            <!--优先级3识别 ACTION_TAG_DISCOVERED-->
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
             </intent-filter>
