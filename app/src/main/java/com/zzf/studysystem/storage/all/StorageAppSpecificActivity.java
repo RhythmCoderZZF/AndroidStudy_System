@@ -6,24 +6,14 @@ import android.view.View;
 import android.widget.Button;
 
 import com.rhythmcoderzzf.baselib.BaseActivity;
-import com.rhythmcoderzzf.baselib.ListAdapter;
-import com.rhythmcoderzzf.baselib.TitleBean;
 import com.zzf.studysystem.R;
-import com.zzf.studysystem.nfc.NFCMainActivity;
-import com.zzf.studysystem.permission.PermissionMainActivity;
-import com.zzf.studysystem.usb.UsbMainActivity;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class StorageAppSpecificActivity extends BaseActivity implements View.OnClickListener {

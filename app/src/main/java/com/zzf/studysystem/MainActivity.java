@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 import com.rhythmcoderzzf.baselib.ListAdapter;
 import com.rhythmcoderzzf.baselib.TitleBean;
-import com.zzf.studysystem.nfc.NFCMain2Activity;
 import com.zzf.studysystem.nfc.NFCMainActivity;
 import com.zzf.studysystem.permission.PermissionMainActivity;
 import com.zzf.studysystem.storage.StorageMainActivity;

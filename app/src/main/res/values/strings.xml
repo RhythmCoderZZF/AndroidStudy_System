@@ -19,4 +19,6 @@
         <br/><br/>When the user uninstalls your app, the files saved in app-specific storage are removed.
         ]]>
     </string>
+    <string name="nfc_ndef" translatable="false">NDEF Tag</string>
+    <string name="nfc_tech" translatable="false">Tech Tag</string>
 </resources>

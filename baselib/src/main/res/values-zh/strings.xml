@@ -2,4 +2,5 @@
 <resources>
     <string name="info">信息</string>
     <string name="ok">确定</string>
+    <string name="cmd">命令行</string>
 </resources>

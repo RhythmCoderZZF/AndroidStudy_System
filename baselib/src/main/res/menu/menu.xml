@@ -6,4 +6,9 @@
         android:icon="@drawable/baseline_info_24"
         android:title="@string/info"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/cmd"
+        android:icon="@drawable/baseline_desktop_windows_24"
+        android:title="@string/cmd"
+        app:showAsAction="always" />
 </menu>

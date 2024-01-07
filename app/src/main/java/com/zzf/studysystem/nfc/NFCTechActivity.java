@@ -11,7 +11,7 @@ import com.rhythmcoderzzf.baselib.BaseActivity;
 import com.rhythmcoderzzf.baselib.utils.LogUtil;
 import com.zzf.studysystem.R;
 
-public class NFCMain2Activity extends BaseActivity {
+public class NFCTechActivity extends BaseActivity {
     private NfcAdapter mAdapter;
     private TextView mTvTagRes;
 

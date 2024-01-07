@@ -24,6 +24,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidStudy_System"
+        android:name=".App"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"
@@ -51,29 +52,27 @@
         </activity>
 
         <!--NFC-->
+        <activity android:name=".nfc.NFCMainActivity" />
         <activity
-            android:name=".nfc.NFCMainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".nfc.NFCMain2Activity"
-            android:launchMode="singleTop"
+            android:name=".nfc.NFCTagActivity"
+            android:exported="true"
             android:label="NFC"
-            android:exported="true">
+            android:launchMode="singleTop">
             <!--优先级1识别 ACTION_NDEF_DISCOVERED-->
             <!--TNF_WELL_KNOW RTD_TEXT-->
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/plain" />
+                <data android:mimeType="*/*" />
             </intent-filter>
             <!--TNF_WELL_KNOW RTD_URL-->
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data
                     android:host="baidu.com"
                     android:scheme="http" />
-            </intent-filter>
+            </intent-filter>-->
             <!--优先级2识别 ACTION_TECH_DISCOVERED-->
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
